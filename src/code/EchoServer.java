@@ -10,7 +10,7 @@ import java.net.Socket;
 public class EchoServer {
     public static void main(String[] args) {
         try {
-            ServerSocket s = new ServerSocket(5555);
+            ServerSocket s = new ServerSocket(8888);
             Socket incoming = s.accept();
             BufferedReader in = new BufferedReader(new InputStreamReader(incoming.getInputStream()));
             PrintWriter out = new PrintWriter(incoming.getOutputStream(),true);

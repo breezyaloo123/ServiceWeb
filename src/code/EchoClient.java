@@ -1,9 +1,6 @@
 package code;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -13,10 +10,12 @@ public class EchoClient {
     public static void main(String[] args) {
         try {
             //"10.153.43.52"
-            Socket s = new Socket("192.168.43.59", 5555);
+            //10.153.42.189
+            Socket s = new Socket("10.153.43.52", 5555);
             BufferedReader r = new BufferedReader(new InputStreamReader(s.getInputStream()));
             PrintWriter out = new PrintWriter(s.getOutputStream(),true);
             Scanner clavier = new Scanner(System.in);
+
             boolean more = true;
             while (more)
             {
