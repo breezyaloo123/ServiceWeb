@@ -20,15 +20,17 @@ public class EchoClient {
             while (more)
             {
                 String line = r.readLine();
+
                 if (line == null)
                 {
                     more = false;
                 }
                 else
                 {
+
+                   // line = clavier.nextLine();
+                    out.println("plus Breezy Aloooooo");//Permet d'appeler une methode cote serveur
                     System.out.println(line);
-                    line = clavier.nextLine();
-                    out.println(line);
                 }
             }
         } catch (UnknownHostException e) {
